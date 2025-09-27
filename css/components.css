@@ -1,0 +1,114 @@
+/* Card component styling */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* Work item image styling */
+.work-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Contact form layout */
+form.contact-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 600px;
+}
+
+/* Form input, textarea, and select styling */
+input,
+textarea,
+select {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+}
+
+/* Focus state for form fields */
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(10, 102, 194, 0.12);
+  border-color: var(--brand);
+}
+
+/* Label styling */
+label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Error message styling */
+.error {
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+/* Reveal animation: hidden by default */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.4,2,.3,1);
+}
+
+/* Reveal animation: visible state */
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Card styling */
+.card, .project-card, .work-item {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(10,102,194,0.08);
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s;
+}
+.card:hover, .project-card:hover, .work-item:hover {
+  box-shadow: 0 4px 24px rgba(10,102,194,0.15);
+}
+
+/* Icon styling for cards */
+.card i, .project-card i {
+  display: block;
+  margin: 0 auto 1rem auto;
+  color: var(--brand, #0a66c2);
+  background: linear-gradient(135deg, #e3f0ff 0%, #f7f9ff 100%);
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2.5rem;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s, background 0.3s;
+}
+.card:hover i, .project-card:hover i {
+  transform: scale(1.12) rotate(-6deg);
+  box-shadow: 0 4px 16px rgba(10,102,194,0.15);
+  color: #fff;
+  background: linear-gradient(135deg, #0a66c2 0%, #0072ff 100%);
+}
+
+/* Responsive grid for features and projects */
+.grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.grid.cols-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+

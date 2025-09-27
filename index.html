@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio — Home</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ayany Obala</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" id="navToggle">
+        <span class="sr-only">Open menu</span>
+        ☰
+      </button>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-photo">
+          <img src="images/profile.png" alt="Photo of Ayany Obala">
+        </div>
+        <div class="hero-text">
+          <h1 class="hero-title">Hi — I'm a developer & educator</h1>
+          <p class="hero-lead">I build responsive websites and tools for education and business.</p>
+          <p><a class="btn" href="services.html">See my services</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container" id="features">
+      <h2>What I do</h2>
+      <div class="grid cols-3">
+        <article class="card reveal">
+          <i class="fas fa-laptop-code fa-3x"></i>
+          <h3>Web Development</h3>
+          <p>Fast, responsive sites using modern HTML, CSS & JS.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-database fa-3x"></i>
+          <h3>Backend Development</h3>
+          <p>Creating functional systems with Python, MySQL, and Django.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-chalkboard-teacher fa-3x"></i>
+          <h3>Education</h3>
+          <p>Leveraging my 10+ years teaching experience to create impactful learning tools.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-book fa-3x"></i>
+          <h3>Teaching Tools</h3>
+          <p>Curriculum-aligned digital resources for Kenyan classrooms.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-user-tie fa-3x"></i>
+          <h3>Consulting</h3>
+          <p>Edtech strategy, planning, and implementation support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Recent Works</h2>
+      <div class="project-grid">
+        <div class="project-card reveal">
+          <i class="fas fa-school fa-3x"></i>
+          <h3>School Management System</h3>
+          <p>A web app to track attendance, grades, and reports for CBC learners.</p>
+        </div>
+        <div class="project-card reveal">
+          <i class="fas fa-briefcase fa-3x"></i>
+          <h3>Job Matching Platform</h3>
+          <p>Connecting skilled workers with opportunities in the informal sector.</p>
+        </div>
+        <div class="project-card reveal">
+          <i class="fas fa-id-card fa-3x"></i>
+          <h3>Portfolio Website</h3>
+          <p>A clean personal portfolio built from scratch with vanilla HTML/CSS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="work container">
+      <h2>Other Work</h2>
+      <div class="grid cols-2">
+        <div class="work-item reveal"><img src="images/jobmatch.png" alt=""><h4>Project A</h4></div>
+        <div class="work-item reveal"><img src="images/jobmatch.png" alt=""><h4>Project B</h4></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ayany Obala — Built with care.</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

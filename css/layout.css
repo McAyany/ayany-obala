@@ -1,0 +1,141 @@
+/* Header styles */
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* Navigation styles */
+.nav {
+  display: block;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.25rem;
+}
+
+/* Hero section */
+.hero {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, #f7f9ff 0%, #fff 100%);
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-lead {
+  color: var(--muted);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 0;
+  flex-direction: row; /* Ensure image is on the left, text on the right */
+}
+
+.hero-text {
+  flex: 1;
+  order: 1; /* Text second */
+}
+
+.hero-photo {
+  order: 0; /* Image first */
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 4px solid var(--brand);
+  transition: transform 0.3s ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Responsive styles for mobile */
+@media (max-width: 700px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-photo {
+    order: 1;
+  }
+  .hero-text {
+    order: 0;
+  }
+  .hero-photo img {
+    margin-bottom: 1rem;
+  }
+  .nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: none;
+  }
+  .nav[aria-hidden="false"] {
+    display: block;
+  }
+  .nav ul {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
