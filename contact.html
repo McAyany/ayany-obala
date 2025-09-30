@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Portfolio — Home</title>
+  <title>Contact — Ayany Obala</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<header class="site-header">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Ayany Obala</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" id="navToggle">
@@ -18,26 +19,62 @@
       </button>
       <nav id="main-nav" class="nav">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
-</header>
-<section class="container">
-  <h2>Contact</h2>
-  <form class="contact-form" action="#" method="post" novalidate>
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" required>
+  </header>
 
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" required>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">Contact Me</h1>
+          <p class="hero-lead">Have a project, collaboration, or just want to say hi? Let’s connect!</p>
+        </div>
+      </div>
+    </section>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+    <section class="container reveal">
+      <div class="grid cols-2">
+        <div>
+          <h2>Get in Touch</h2>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:ayanyobala@gmail.com">ayanyobala@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+254718436164">+254 718 436 164</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+          <div class="social-links" style="margin-top:1rem;">
+            <a href="https://github.com/McAyany" target="_blank"><i class="fab fa-github"></i> GitHub</a> &nbsp;|&nbsp;
+            <a href="https://linkedin.com/in/ayany-obala" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp;|&nbsp;
+            <a href="https://twitter.com/@ayanyobala" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          </div>
+        </div>
+        <div>
+          <h2>Send Me a Message</h2>
+          <form class="contact-form" action="#" method="post" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ayany Obala — Portfolio</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

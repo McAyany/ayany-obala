@@ -1,9 +1,33 @@
-/* Card component styling */
-.card {
+/* Card, project, and work item styling */
+.card, .project-card, .work-item {
   background: #fff;
   border-radius: var(--radius);
-  padding: 1rem;
   box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s;
+}
+.card:hover, .project-card:hover, .work-item:hover {
+  box-shadow: 0 4px 24px rgba(10,102,194,0.15);
+}
+
+/* Icon styling for cards and skills */
+.card i, .project-card i, .skill i {
+  display: block;
+  margin: 0 auto 1rem auto;
+  color: var(--brand, #0a66c2);
+  background: linear-gradient(135deg, #e3f0ff 0%, #f7f9ff 100%);
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2.5rem;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s, background 0.3s;
+}
+.card:hover i, .project-card:hover i, .skill:hover i {
+  transform: scale(1.12) rotate(-6deg);
+  box-shadow: 0 4px 16px rgba(10,102,194,0.15);
+  color: #fff;
+  background: linear-gradient(135deg, #0a66c2 0%, #0072ff 100%);
 }
 
 /* Work item image styling */
@@ -19,89 +43,48 @@ form.contact-form {
   display: grid;
   gap: 0.75rem;
   max-width: 600px;
+  margin: 2rem auto;
 }
-
-/* Form input, textarea, and select styling */
-input,
-textarea,
-select {
+input, textarea, select {
   padding: 0.6rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   font: inherit;
 }
-
-/* Focus state for form fields */
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
   outline: 2px solid rgba(10, 102, 194, 0.12);
   border-color: var(--brand);
 }
-
-/* Label styling */
 label {
   font-size: 0.9rem;
   color: var(--muted);
 }
-
-/* Error message styling */
 .error {
   color: #b00020;
   font-size: 0.9rem;
 }
 
-/* Reveal animation: hidden by default */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.4,2,.3,1);
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
-
-/* Reveal animation: visible state */
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* Card styling */
-.card, .project-card, .work-item {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 16px rgba(10,102,194,0.08);
-  padding: 2rem 1.5rem;
-  margin-bottom: 1.5rem;
+.skill {
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: #f7f9ff;
+  box-shadow: 0 2px 8px rgba(10,102,194,0.05);
   transition: box-shadow 0.3s;
 }
-.card:hover, .project-card:hover, .work-item:hover {
-  box-shadow: 0 4px 24px rgba(10,102,194,0.15);
-}
-
-/* Icon styling for cards */
-.card i, .project-card i {
-  display: block;
-  margin: 0 auto 1rem auto;
-  color: var(--brand, #0a66c2);
-  background: linear-gradient(135deg, #e3f0ff 0%, #f7f9ff 100%);
-  border-radius: 50%;
-  padding: 1rem;
-  font-size: 2.5rem;
-  box-shadow: 0 2px 8px rgba(10,102,194,0.08);
-  transition: transform 0.3s, box-shadow 0.3s, color 0.3s, background 0.3s;
-}
-.card:hover i, .project-card:hover i {
-  transform: scale(1.12) rotate(-6deg);
-  box-shadow: 0 4px 16px rgba(10,102,194,0.15);
-  color: #fff;
-  background: linear-gradient(135deg, #0a66c2 0%, #0072ff 100%);
+.skill:hover {
+  box-shadow: 0 4px 16px rgba(10,102,194,0.12);
 }
 
 /* Responsive grid for features and projects */
-.grid.cols-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-.project-grid {
+.grid.cols-3, .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
@@ -110,5 +93,50 @@ label {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
+}
+
+/* Timeline Component */
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 800px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-color, #007acc);
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--primary-color, #007acc);
+  border-radius: 50%;
+  position: relative;
+  margin-right: 20px;
+  margin-left: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px #fff;
+}
+.timeline-content {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;
+}
+.timeline-content h3 {
+  margin-top: 0;
+  color: var(--primary-color, #007acc);
 }
 

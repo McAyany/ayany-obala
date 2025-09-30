@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Portfolio — Home</title>
+  <title>Services — Ayany Obala</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
@@ -18,11 +19,85 @@
       </button>
       <nav id="main-nav" class="nav">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">My Services</h1>
+          <p class="hero-lead">I provide practical digital solutions that bridge education, technology, and innovation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="container">
+      <h2>What I Offer</h2>
+      <div class="grid cols-3">
+        <article class="card reveal">
+          <i class="fas fa-laptop-code fa-3x"></i>
+          <h3>Web Development</h3>
+          <p>Designing and developing modern, responsive, and user-friendly websites using HTML, CSS, and JavaScript.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-database fa-3x"></i>
+          <h3>Backend Systems</h3>
+          <p>Building functional database-driven applications with Python, MySQL, and scalable architectures.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-chalkboard-teacher fa-3x"></i>
+          <h3>EdTech Solutions</h3>
+          <p>Creating tools that simplify learning and teaching, from school management systems to digital revision guides.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-graduation-cap fa-3x"></i>
+          <h3>Training & Tutoring</h3>
+          <p>Helping learners and teachers understand coding, digital literacy, and modern educational practices.</p>
+        </article>
+        <article class="card reveal">
+          <i class="fas fa-lightbulb fa-3x"></i>
+          <h3>Consultation</h3>
+          <p>Advising schools and small businesses on integrating technology effectively for better results.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section class="container reveal">
+      <h2>Why Work With Me?</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fas fa-check-circle fa-2x"></i><p>10+ years teaching experience</p></div>
+        <div class="skill"><i class="fas fa-check-circle fa-2x"></i><p>Strong problem-solving mindset</p></div>
+        <div class="skill"><i class="fas fa-check-circle fa-2x"></i><p>Passionate about education & technology</p></div>
+        <div class="skill"><i class="fas fa-check-circle fa-2x"></i><p>Reliable, detail-oriented approach</p></div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta container reveal">
+      <h2>Let’s Work Together</h2>
+      <p>Looking for a dedicated developer and educator to bring your ideas to life?</p>
+      <a href="contact.html" class="btn">Contact Me</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ayany Obala — Portfolio</p>
+      <nav class="footer-links">
+        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

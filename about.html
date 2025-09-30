@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Portfolio — Home</title>
+  <title>About Me — Ayany Obala</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
@@ -18,11 +19,99 @@
       </button>
       <nav id="main-nav" class="nav">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-photo">
+          <img src="images/profile.png" alt="Ayany Obala" class="profile-pic reveal">
+        </div>
+        <div class="hero-text reveal">
+          <h1 class="hero-title">About Me</h1>
+          <p class="hero-lead">Hello! I’m <strong>Ayany Obala</strong>, a developer and educator passionate about creating solutions that make learning and work more accessible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography -->
+    <section class="bio container reveal">
+      <h2>My Story</h2>
+      <p>I have over 10 years of experience as a teacher, and in recent years, I’ve transitioned into software development. My goal is to merge my teaching background with technology to create impactful digital tools for education and job opportunities.</p>
+    </section>
+<!-- My Journey -->
+  <section class="journey">
+  <h2>My Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2014 – 2024</h3>
+        <p>Worked as a high school teacher, inspiring learners and building a strong foundation in education.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2023 – 2025</h3>
+        <p>Transitioned into software development, mastering HTML, CSS, JavaScript, and Python.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3> Present</h3>
+        <p>Building impactful projects like a School Management System and a Job Matching Platform.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+    <!-- Skills -->
+    <section class="skills container reveal">
+      <h2>Skills & Strengths</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fas fa-laptop-code fa-2x"></i><p>Web Development</p></div>
+        <div class="skill"><i class="fas fa-database fa-2x"></i><p>Backend Development</p></div>
+        <div class="skill"><i class="fas fa-chalkboard-teacher fa-2x"></i><p>Education</p></div>
+        <div class="skill"><i class="fas fa-lightbulb fa-2x"></i><p>Problem Solving</p></div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements container reveal">
+      <h2>Highlights</h2>
+      <ul>
+        <li>✔️ Built a School Management System for CBC learners.</li>
+        <li>✔️ Created a Job Matching Platform for informal sector workers.</li>
+        <li>✔️ 10+ years of teaching experience.</li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta container reveal">
+      <h2>Let’s Connect</h2>
+      <p>I’m open to collaborations and projects in education and technology.</p>
+      <a href="contact.html" class="btn">Contact Me</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ayany Obala | Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
