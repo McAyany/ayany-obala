@@ -78,9 +78,9 @@ project-folder/
 │   └── main.js
 │
 ├── images/
-│   ├── profile.png
-│   ├── jobmatch.png
-│   ├── smartdesk.png
+│   ├── profile.webp
+│   ├── jobmatch.webp
+│   ├── smartdesk.webp
 │
 └── README.md
 ```
