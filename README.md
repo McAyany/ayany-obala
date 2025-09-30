@@ -78,9 +78,9 @@ project-folder/
 │   └── main.js
 │
 ├── images/
-│   ├── profile.npg
-│   ├── project1.jpg
-│   ├── project2.jpg
+│   ├── profile.png
+│   ├── jobmatch.png
+│   ├── smartdesk.png
 │
 └── README.md
 ```
@@ -111,7 +111,7 @@ The site can be hosted using any static hosting provider:
 - **Vercel**
   - Import GitHub repo and deploy with one click.
 
-**Live URL:** [Add your deployed link here]
+**Live URL:** https://mcayany.github.io/ayany-obala/
 
 ---
 
@@ -121,8 +121,6 @@ The site can be hosted using any static hosting provider:
   - Clean, organized codebase
   - `README.md` documenting project structure and purpose
 - Live deployed website with shareable URL
-- Screenshots or demo video (optional, for grading)
-
 ---
 
 ## 🎯 Outcomes
